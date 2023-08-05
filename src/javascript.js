@@ -2,17 +2,19 @@ function showContent(idName) {
   var sectionCount;
   var elementArray = document.querySelectorAll(".main-2");
   console.log(elementArray);
-  for (var i = 0; i < elementArray.length; i++) {
-    document.getElementById(`opt-${i + 1}`).classList?.remove("showContent");
+  for (var i = 1; i <= elementArray.length; i++) {
+    document.getElementById(`opt-${i}`).classList?.remove("showContent");
     document
-      .getElementsByClassName(`section-opt-${i + 1}`)[0]
+      .getElementsByClassName(`section-opt-${i}`)[0]
       .classList?.remove("changeSectionStyle");
-    if (idName.includes(i + 1)) {
-      sectionCount = i + 1;
+    document.getElementById(`pair-${i}`).removeAttribute("checked");
+    if (idName.includes(i)) {
+      sectionCount = i;
     }
   }
   document.getElementById(idName).classList.add("showContent");
   document
     .getElementsByClassName(`section-opt-${sectionCount}`)[0]
     .classList.add("changeSectionStyle");
+  document.getElementById(`pair-${sectionCount}`).checked = true;
 }
