@@ -6,7 +6,6 @@ function showContent(idName) {
     document
       .getElementsByClassName(`section-opt-${i}`)[0]
       .classList?.remove("changeSectionStyle");
-    document.getElementById(`pair-${i}`).removeAttribute("checked");
     if (idName.includes(i)) {
       sectionCount = i;
     }
@@ -15,5 +14,4 @@ function showContent(idName) {
   document
     .getElementsByClassName(`section-opt-${sectionCount}`)[0]
     .classList.add("changeSectionStyle");
-  document.getElementById(`pair-${sectionCount}`).checked = true;
 }
