@@ -1,7 +1,6 @@
 function showContent(idName) {
   var sectionCount;
   var elementArray = document.querySelectorAll(".main-2");
-  console.log(elementArray);
   for (var i = 1; i <= elementArray.length; i++) {
     document.getElementById(`opt-${i}`).classList?.remove("showContent");
     document
