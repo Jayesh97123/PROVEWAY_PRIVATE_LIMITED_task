@@ -233,7 +233,7 @@ footer {
     background: #F4FBF9;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 390px) {
     .section-opt-1 label, .section-opt-2 label, .section-opt-3 label, .section-1 header {
         width: 250px;
     }
