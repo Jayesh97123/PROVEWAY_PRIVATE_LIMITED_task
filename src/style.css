@@ -25,9 +25,16 @@ input[type=radio] {
     margin-bottom: 15px;
 }
 
+.section-opt-1,
+.section-opt-2,
+.section-opt-3 {
+    cursor: pointer;
+}
+
 .section-1 header {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 340px;
 }
 
@@ -47,20 +54,14 @@ input[type=radio] {
     padding: 0 20px;
 }
 
-.section-opt-1,
-.section-opt-2,
-.section-opt-3 {
+.section-opt-1 label,
+.section-opt-2 label,
+.section-opt-3 label {
     border-radius: 3.615px;
     border: 0.904px solid #C8C8C8;
     background: #FFF;
     padding: 15px;
     width: 340px;
-}
-
-.section-opt-1 label,
-.section-opt-2 label,
-.section-opt-3 label {
-    width: 310px;
 }
 
 .section-opt-1 label .main-1,
@@ -152,6 +153,7 @@ table select {
     line-height: normal;
     opacity: 0.3;
     text-decoration: line-through;
+    margin-right: 10px;
 }
 
 .section-opt-2 label .end .end-2 {
@@ -225,8 +227,26 @@ footer {
     display: contents !important;
 }
 
-.changeSectionStyle {
+.changeSectionStyle label{
     border-radius: 3.615px;
     border: 0.904px solid #007F61;
     background: #F4FBF9;
+}
+
+@media (max-width: 340px) {
+    .section-opt-1 label, .section-opt-2 label, .section-opt-3 label, .section-1 header {
+        width: 250px;
+    }
+
+    .section-1 header hr {
+        width: 48px;
+    }
+
+    .section-opt-2 label .end {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .section-opt-2 label .end .end-2 {
+        margin-bottom: 5px;
+    }
 }
